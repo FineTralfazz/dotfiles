@@ -1,3 +1,5 @@
 [user]
 	email = chris@chrisbailey.io
 	name = Chris Bailey
+[push]
+	default = simple
