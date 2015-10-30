@@ -10,7 +10,7 @@ set shell=/bin/bash
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'sickill/vim-monokai'
 
