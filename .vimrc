@@ -11,13 +11,14 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'jeaye/color_coded'
+"Plugin 'jeaye/color_coded'
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-bundler'
 Plugin 'finetralfazz/vim-fastexec'
+Plugin 'Raimondi/delimitMate'
 
 " More Vundle stuff
 call vundle#end()
