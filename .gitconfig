@@ -3,3 +3,5 @@
 	name = Chris Bailey
 [push]
 	default = simple
+[core]
+	excludesfile = /usr/home/christopher/.gitignore_global

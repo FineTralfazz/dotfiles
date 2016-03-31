@@ -11,14 +11,17 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-"Plugin 'jeaye/color_coded'
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-bundler'
 Plugin 'finetralfazz/vim-fastexec'
-Plugin 'Raimondi/delimitMate'
+"Plugin 'Raimondi/delimitMate'
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-endwise'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-eunuch'
 
 " More Vundle stuff
 call vundle#end()
@@ -30,3 +33,4 @@ set shiftwidth=2
 set tabstop=2
 colorscheme monokai
 
+let g:ycm_confirm_extra_conf=0
