@@ -9,8 +9,8 @@ set shell=/bin/bash
 " Plugins
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
