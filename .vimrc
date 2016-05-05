@@ -33,4 +33,6 @@ set shiftwidth=2
 set tabstop=2
 colorscheme monokai
 
-let g:ycm_confirm_extra_conf=0
+" Filetype specific settings
+autocmd Filetype ruby setlocal ts=2 sw=2 et
+
