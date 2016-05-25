@@ -17,11 +17,12 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-bundler'
 Plugin 'finetralfazz/vim-fastexec'
-"Plugin 'Raimondi/delimitMate'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-eunuch'
+Plugin 'saltstack/salt-vim'
+Plugin 'stephpy/vim-yaml'
 
 " More Vundle stuff
 call vundle#end()
@@ -32,6 +33,7 @@ syntax enable
 set shiftwidth=2
 set tabstop=2
 colorscheme monokai
+set backspace=2
 
 " Filetype specific settings
 autocmd Filetype ruby setlocal ts=2 sw=2 et
