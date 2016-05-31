@@ -4,7 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-set shell=/bin/bash
+set shell=/bin/sh
 
 " Plugins
 Plugin 'scrooloose/syntastic'
