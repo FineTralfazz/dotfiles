@@ -1,0 +1,4 @@
+URxvt.font: xft:inconsolata
+URxvt.scrollBar: false
+URxvt*background: Black
+URxvt*foreground: White
