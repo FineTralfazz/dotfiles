@@ -23,6 +23,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-eunuch'
 Plugin 'saltstack/salt-vim'
 Plugin 'stephpy/vim-yaml'
+Plugin 'Shougo/neocomplete.vim'
 
 " More Vundle stuff
 call vundle#end()
