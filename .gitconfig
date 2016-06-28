@@ -1,7 +1,9 @@
 [user]
 	email = chris@chrisbailey.io
 	name = Chris Bailey
+	signingkey = AAF8C117
 [push]
 	default = simple
 [core]
 	excludesfile = ~/.gitignore_global
+	autocrlf = input
