@@ -9,25 +9,43 @@ set shell=/bin/sh
 " Plugins
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'rdnetto/YCM-Generator'
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-bundler'
 Plugin 'finetralfazz/vim-fastexec'
-Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-eunuch'
 Plugin 'saltstack/salt-vim'
-Plugin 'stephpy/vim-yaml'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'dsawardekar/ember.vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'luochen1990/rainbow'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
+Plugin 'godlygeek/tabular'
+Plugin 'ap/vim-css-color'
+Plugin 'mhinz/vim-startify'
 
 " More Vundle stuff
 call vundle#end()
 filetype plugin indent on
+
+" Neocomplete stuff
+let g:neocomplete#enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Random plugin configs
+let g:startify_custom_header = ['']
+let g:rainbow_active = 1
+noremap <C-\> :TagbarToggle<CR>
 
 " General config
 syntax enable
