@@ -53,6 +53,9 @@ set shiftwidth=2
 set tabstop=2
 colorscheme monokai
 set backspace=2
+if has('gui_running')
+	set guifont=Inconsolata\ Medium\ 12
+endif
 
 " Filetype specific settings
 autocmd Filetype ruby setlocal ts=2 sw=2 et
