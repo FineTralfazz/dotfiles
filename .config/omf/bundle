@@ -1,8 +1,4 @@
 package bang-bang
-package bundler
-package https://github.com/tuvistavie/fish-ssh-agent
-package keychain
-package rails
 package rvm
 package sudope
 theme default
