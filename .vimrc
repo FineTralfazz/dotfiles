@@ -27,7 +27,8 @@ Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 Plugin 'ap/vim-css-color'
-Plugin 'mhinz/vim-startify'
+Plugin 'vim-scripts/restore_view.vim'
+Plugin 'Konfekt/FastFold'
 
 " More Vundle stuff
 call vundle#end()
@@ -56,6 +57,8 @@ set backspace=2
 if has('gui_running')
 	set guifont=Inconsolata\ Medium\ 12
 endif
+set foldmethod=syntax
+set foldlevelstart=99 " Don't fold by default
 
 " Filetype specific settings
 autocmd Filetype ruby setlocal ts=2 sw=2 et
