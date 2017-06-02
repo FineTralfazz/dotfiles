@@ -1,6 +1,10 @@
 export PATH="/usr/local/bin:$HOME/.rvm/bin:$PATH"
 export HISTFILE=~/.zsh_history
-source /usr/local/share/antigen/antigen.zsh
+if [[ `uname` == Darwin || `uname` == FreeBSD ]]; then
+	source /usr/local/share/antigen/antigen.zsh
+else
+	source /usr/share/zsh-antigen/antigen.zsh
+fi
 
 # Plugins
 antigen theme steeef
