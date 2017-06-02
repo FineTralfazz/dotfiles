@@ -15,3 +15,14 @@ source $OMF_PATH/init.fish
 # DevkitPro stuff
 set -x DEVKITPRO $HOME/devkitPro
 set -x DEVKITARM $DEVKITPRO/devkitARM
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
+# SSH agent
+if test -z "$SSH_ENV"
+	setenv SSH_ENV $HOME/.ssh/environment
+end
+
+if not __ssh_agent_is_started
+	__ssh_agent_start
+end
