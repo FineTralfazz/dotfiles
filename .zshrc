@@ -1,7 +1,12 @@
 export PATH="/usr/local/bin:$HOME/.rvm/bin:$PATH"
 export HISTFILE=~/.zsh_history
 export SAVEHIST=1000
-source /usr/local/share/antigen/antigen.zsh
+
+if [[ `uname` == Darwin || `uname` == FreeBSD ]]; then
+	source /usr/local/share/antigen/antigen.zsh
+else
+	source /usr/share/zsh-antigen/antigen.zsh
+fi
 
 setopt inc_append_history
 setopt share_history
