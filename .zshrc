@@ -1,4 +1,6 @@
+export EDITOR="vim"
 export PATH="/usr/local/bin:$HOME/.rvm/bin:$PATH"
+export GOPATH="$HOME/Code/go"
 export HISTFILE=~/.zsh_history
 export SAVEHIST=1000
 
@@ -10,6 +12,8 @@ fi
 
 setopt inc_append_history
 setopt share_history
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
 
 alias gdb='gdb -q'
 
