@@ -15,7 +15,10 @@ setopt share_history
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
+#Aliases
 alias gdb='gdb -q'
+alias ghci='stack ghci'
+alias ghc='stack ghc'
 
 # Plugins
 antigen theme steeef
