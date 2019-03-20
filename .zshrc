@@ -25,6 +25,7 @@ bindkey "^[e" end-of-line
 
 #Aliases
 alias gdb='gdb -q'
+alias http='python2 -m SimpleHTTPServer'
 
 # Plugins
 antigen theme steeef
