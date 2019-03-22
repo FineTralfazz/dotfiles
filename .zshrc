@@ -18,10 +18,10 @@ setopt extended_history
 
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
-bindkey "^[[1;5D" backward-word
-bindkey "^[[1;5C" forward-word
-bindkey "^[a" beginning-of-line
-bindkey "^[e" end-of-line
+bindkey "^[[1;2D" backward-word
+bindkey "^[[1;2C" forward-word
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 
 #Aliases
 alias gdb='gdb -q'
