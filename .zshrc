@@ -5,6 +5,7 @@ export HISTFILE=~/.zsh_history
 export SAVEHIST=1000
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM="$DEVKITPRO/devkitARM"
+export SPACESHIP_CHAR_SUFFIX=" "
 
 if [[ `uname` == Darwin || `uname` == FreeBSD ]]; then
 	source /usr/local/share/antigen/antigen.zsh
@@ -16,6 +17,7 @@ setopt share_history
 setopt inc_append_history
 setopt extended_history
 
+bindkey -e
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 bindkey "^[[1;2D" backward-word
@@ -28,7 +30,7 @@ alias gdb='gdb -q'
 alias http='python2 -m SimpleHTTPServer'
 
 # Plugins
-antigen theme steeef
+antigen theme denysdovhan/spaceship-prompt
 antigen bundle tmux
 antigen bundle docker
 antigen bundle zsh-users/zsh-syntax-highlighting
