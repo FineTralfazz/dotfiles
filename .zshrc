@@ -5,7 +5,17 @@ export HISTFILE=~/.zsh_history
 export SAVEHIST=1000
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM="$DEVKITPRO/devkitARM"
+
+# Spaceship theme settings
 export SPACESHIP_CHAR_SUFFIX=" "
+export SPACESHIP_DOCKER_SHOW=false
+export SPACESHIP_KUBECONTEXT_SYMBOL="\ufd31 "
+export SPACESHIP_PYENV_SYMBOL="\uf820 "
+export SPACESHIP_NODE_SYMBOL="\ue74e "
+export SPACESHIP_GOLANG_SYMBOL="Go "
+export SPACESHIP_RUBY_SYMBOL="\ue21e "
+export SPACESHIP_SWIFT_SYMBOL="\ue755 "
+export SPACESHIP_DOTNET_SYMBOL="\ue77f "
 
 if [[ `uname` == Darwin || `uname` == FreeBSD ]]; then
 	source /usr/local/share/antigen/antigen.zsh
