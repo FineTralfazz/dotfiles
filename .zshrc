@@ -41,8 +41,13 @@ alias http='python2 -m SimpleHTTPServer'
 
 # Plugins
 antigen theme denysdovhan/spaceship-prompt
-antigen bundle tmux
 antigen bundle docker
+antigen bundle doctl
+antigen bundle golang
+antigen bundle kubectl
+antigen bundle nmap
+antigen bundle vscode
+
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
