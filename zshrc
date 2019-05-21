@@ -1,6 +1,9 @@
 export EDITOR="vim"
 export GOPATH="$HOME/Code/go"
 export PATH="/usr/local/opt/llvm/bin:/usr/local/bin:$HOME/.rvm/bin:$GOPATH/bin:/opt/devkitpro/tools/bin:$PATH"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
 export HISTFILE=~/.zsh_history
 export SAVEHIST=1000
 export DEVKITPRO=/opt/devkitpro
@@ -16,6 +19,7 @@ export SPACESHIP_GOLANG_SYMBOL="Go "
 export SPACESHIP_RUBY_SYMBOL="\ue21e "
 export SPACESHIP_SWIFT_SYMBOL="\ue755 "
 export SPACESHIP_DOTNET_SYMBOL="\ue77f "
+export SPACESHIP_PACKAGE_SYMBOL="\uf487 "
 
 if [[ `uname` == Darwin || `uname` == FreeBSD ]]; then
 	source /usr/local/share/antigen/antigen.zsh
@@ -45,7 +49,6 @@ antigen theme denysdovhan/spaceship-prompt
 antigen bundle docker
 antigen bundle doctl
 antigen bundle golang
-antigen bundle kubectl
 antigen bundle nmap
 antigen bundle vscode
 
@@ -53,7 +56,10 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # PyEnv
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 function anybar { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
