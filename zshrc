@@ -20,6 +20,7 @@ export SPACESHIP_RUBY_SYMBOL="\ue21e "
 export SPACESHIP_SWIFT_SYMBOL="\ue755 "
 export SPACESHIP_DOTNET_SYMBOL="\ue77f "
 export SPACESHIP_PACKAGE_SYMBOL="\uf487 "
+export SPACESHIP_RUST_SYMBOL="\U1F980 "
 
 if [[ `uname` == Darwin || `uname` == FreeBSD ]]; then
 	source /usr/local/share/antigen/antigen.zsh
@@ -43,6 +44,7 @@ bindkey "^[[3~" delete-char
 #Aliases
 alias gdb='gdb -q'
 alias http='python2 -m SimpleHTTPServer'
+alias ghidra=ghidraRun
 
 # Plugins
 antigen theme denysdovhan/spaceship-prompt
@@ -62,4 +64,10 @@ eval "$(pyenv virtualenv-init -)"
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# Java
+alias java8='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/'
+alias java12='export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home/'
+
 function anybar { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
