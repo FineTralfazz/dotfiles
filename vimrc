@@ -8,26 +8,13 @@ set shell=/bin/sh
 
 " Plugins
 Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
 Plugin 'sickill/vim-monokai'
-Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'saltstack/salt-vim'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'dsawardekar/ember.vim'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'luochen1990/rainbow'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'majutsushi/tagbar'
-Plugin 'godlygeek/tabular'
 Plugin 'ap/vim-css-color'
-Plugin 'vim-scripts/restore_view.vim'
-Plugin 'Konfekt/FastFold'
 
 " More Vundle stuff
 call vundle#end()
