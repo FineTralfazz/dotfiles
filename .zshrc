@@ -5,6 +5,7 @@ export HISTFILE=~/.zsh_history
 export SAVEHIST=1000
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM="$DEVKITPRO/devkitARM"
+export ZSH_CACHE_DIR=/tmp
 
 # Spaceship theme settings
 export SPACESHIP_CHAR_SUFFIX=" "
@@ -41,14 +42,16 @@ alias gdb='gdb -q'
 alias http='python2 -m SimpleHTTPServer'
 
 # Plugins
+#antigen use oh-my-zsh
 antigen theme denysdovhan/spaceship-prompt
 antigen bundle docker
 antigen bundle doctl
 antigen bundle golang
 antigen bundle kubectl
 antigen bundle nmap
+antigen bundle unixorn/tumult.plugin.zsh
 antigen bundle vscode
-
+antigen bundle marzocchi/zsh-notify
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
