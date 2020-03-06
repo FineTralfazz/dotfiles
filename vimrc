@@ -1,51 +1,56 @@
-" Vundle stuff
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-set shell=/bin/sh
-
 " Plugins
-Plugin 'scrooloose/syntastic'
-Plugin 'sickill/vim-monokai'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'luochen1990/rainbow'
-Plugin 'ap/vim-css-color'
+call plug#begin('~/.vim/plugged')
+	Plug 'scrooloose/nerdtree'
+	Plug 'dracula/vim', { 'as': 'dracula' }
+	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-endwise'
+	Plug 'jiangmiao/auto-pairs'
+	Plug 'sheerun/vim-polyglot'
+	Plug 'luochen1990/rainbow'
+	Plug 'ap/vim-css-color'
+	Plug 'vim-airline/vim-airline'
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+	Plug 'junegunn/fzf'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'dense-analysis/ale'
+call plug#end()
 
-" More Vundle stuff
-call vundle#end()
-filetype plugin indent on
 
-" Neocomplete stuff
-let g:neocomplete#enable_at_startup = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-set completeopt-=preview
+" Deoplete stuff
+let g:deoplete#enable_at_startup = 1
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['solargraph', 'stdio'],
+		\ 'rust': ['rust-analyzer'],
+    \ }
+
+" ALE configs
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_column_always = 1
+let g:ale_linters_explicit = 1
+let g:ale_set_highlights = 0
+let g:ale_linters = { 'ruby': ['standardrb'] }
+let g:ale_sign_style_error = '❌'
+let g:ale_enabled = 1
+let g:ale_fixers = { 'ruby': ['standardrb'], '*': ['remove_trailing_lines', 'trim_whitespace']}
+let g:ale_fix_on_save = 1
 
 " Random plugin configs
-let g:startify_custom_header = ['']
 let g:rainbow_active = 1
-noremap <C-\> :TagbarToggle<CR>
+noremap <silent> <C-\> :NERDTreeToggle<CR>
 
 " General config
+colorscheme dracula
 syntax enable
+filetype plugin indent on
 set shiftwidth=2
 set tabstop=2
-colorscheme monokai
 set backspace=2
-if has('gui_running')
-	set guifont=Inconsolata\ Medium\ 12
-endif
 set foldmethod=syntax
 set foldlevelstart=99 " Don't fold by default
+set mouse=a
+set number
 
 " Filetype specific settings
 autocmd Filetype ruby setlocal ts=2 sw=2 et

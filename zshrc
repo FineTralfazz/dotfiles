@@ -46,6 +46,7 @@ bindkey "^[[3~" delete-char
 alias gdb='gdb -q'
 alias http='python2 -m SimpleHTTPServer'
 alias ghidra=ghidraRun
+alias vim=nvim
 
 # Plugins
 #antigen use oh-my-zsh
