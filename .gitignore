@@ -1,4 +1,5 @@
 .netrwhist
 fish_history
 fishd.*
-.vim/view
+vim/plugged
+
