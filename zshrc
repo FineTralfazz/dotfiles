@@ -33,15 +33,6 @@ setopt share_history
 setopt inc_append_history
 setopt extended_history
 
-bindkey -e
-bindkey '^[[A' up-line-or-search
-bindkey '^[[B' down-line-or-search
-bindkey "^[[1;2D" backward-word
-bindkey "^[[1;2C" forward-word
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
-bindkey "^[[3~" delete-char
-
 #Aliases
 alias gdb='gdb -q'
 alias http='python2 -m SimpleHTTPServer'
