@@ -1,4 +1,4 @@
-export EDITOR="vim"
+export EDITOR="nvim"
 export GOPATH="$HOME/Code/go"
 export PATH="/usr/local/opt/llvm/bin:/usr/local/bin:$HOME/.rvm/bin:$GOPATH/bin:/opt/devkitpro/tools/bin:$PATH"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
@@ -16,20 +16,7 @@ else
 	source /usr/share/zsh-antigen/antigen.zsh
 fi
 
-setopt share_history
-setopt inc_append_history
-setopt extended_history
-bindkey -v
-
-#Aliases
-alias gdb='gdb -q'
-alias http='python2 -m SimpleHTTPServer'
-alias ghidra=ghidraRun
-alias vim=nvim
-
 # Plugins
-#antigen use oh-my-zsh
-# antigen theme denysdovhan/spaceship-prompt
 antigen bundle docker
 antigen bundle doctl
 antigen bundle golang
@@ -39,6 +26,17 @@ antigen bundle vscode
 antigen bundle marzocchi/zsh-notify
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
+
+bindkey -v
+setopt share_history
+setopt inc_append_history
+setopt extended_history
+
+#Aliases
+alias gdb='gdb -q'
+alias http='python2 -m SimpleHTTPServer'
+alias ghidra=ghidraRun
+alias vim=nvim
 
 # PyEnv
 eval "$(pyenv init -)"
