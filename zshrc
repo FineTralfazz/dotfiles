@@ -21,7 +21,6 @@ antigen bundle docker
 antigen bundle doctl
 antigen bundle golang
 antigen bundle nmap
-antigen bundle unixorn/tumult.plugin.zsh
 antigen bundle vscode
 antigen bundle marzocchi/zsh-notify
 antigen bundle zsh-users/zsh-syntax-highlighting
