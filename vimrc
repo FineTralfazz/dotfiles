@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'dense-analysis/ale'
 	Plug 'jlanzarotta/bufexplorer'
+	Plug 'tpope/vim-dispatch'
 call plug#end()
 
 
