@@ -1,0 +1,38 @@
+[aws]
+disabled = true
+symbol = " "
+
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+[docker]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = "Go "
+
+[java]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = "🦀 "
