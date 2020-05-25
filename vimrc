@@ -15,6 +15,15 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'dense-analysis/ale'
 	Plug 'jlanzarotta/bufexplorer'
+	Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+	Plug 'tpope/vim-rails'
+	Plug 'rstacruz/vim-closer'
+	Plug 'tpope/vim-dispatch'
+	if has('win32') || has('win64')
+		Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
+	else
+		Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+	endif
 call plug#end()
 
 
@@ -23,18 +32,22 @@ let g:deoplete#enable_at_startup = 1
 let g:LanguageClient_serverCommands = {
     \ 'ruby': ['solargraph', 'stdio'],
 		\ 'rust': ['rust-analyzer'],
-		\ 'go': ['gofmt'],
+		\ 'go': ['gopls'],
 		\ }
+
+nnoremap <silent> <leader>, :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> <leader>d :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <leader>r :call LanguageClient#textDocument_rename()<CR>
 
 " ALE configs
 let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_linters_explicit = 1
 let g:ale_set_highlights = 0
-let g:ale_linters = { 'ruby': ['standardrb'], 'go': ['gopls'] }
+let g:ale_linters = { 'ruby': ['standardrb'], 'go': ['gopls'], 'terraform': ['tflint'], 'rust': ['analyzer'] }
 let g:ale_sign_style_error = '❌'
 let g:ale_enabled = 1
-let g:ale_fixers = { 'ruby': ['standardrb'], 'go': ['gofmt'], '*': ['remove_trailing_lines', 'trim_whitespace']}
+let g:ale_fixers = { 'ruby': ['standardrb'], 'go': ['gofmt'], 'terraform': ['terraform'], 'rust': ['rustfmt'], '*': ['remove_trailing_lines', 'trim_whitespace']}
 let g:ale_fix_on_save = 1
 
 " Random plugin configs
