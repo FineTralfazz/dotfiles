@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 	Plug 'junegunn/fzf'
+	Plug 'tpope/vim-fugitive'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'dense-analysis/ale'
@@ -19,6 +20,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-rails'
 	Plug 'rstacruz/vim-closer'
 	Plug 'tpope/vim-dispatch'
+	Plug 'tpope/vim-eunuch'
 	if has('win32') || has('win64')
 		Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
 	else
@@ -33,6 +35,9 @@ let g:LanguageClient_serverCommands = {
     \ 'ruby': ['solargraph', 'stdio'],
 		\ 'rust': ['rust-analyzer'],
 		\ 'go': ['gopls'],
+		\ }
+let g:LanguageClient_rootMarkers = {
+		\ 'ruby': ['Gemfile']
 		\ }
 
 nnoremap <silent> <leader>, :call LanguageClient#textDocument_hover()<CR>
@@ -66,6 +71,14 @@ set foldlevelstart=99 " Don't fold by default
 set mouse=a
 set number
 let mapleader = ","
+
+" double tap esc to dehighlight the last search
+nnoremap <esc><esc> :noh<return><esc>
+
+"maintain selection fixing indent
+vnoremap > >gv
+vnoremap < <gv
+vnoremap = =gv
 
 " Filetype specific settings
 autocmd Filetype ruby setlocal ts=2 sw=2 et
