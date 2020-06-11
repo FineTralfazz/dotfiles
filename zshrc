@@ -33,9 +33,10 @@ setopt extended_history
 
 #Aliases
 alias gdb='gdb -q'
-alias http='python2 -m SimpleHTTPServer'
+alias http='python3 -m http.server'
 alias ghidra=ghidraRun
 alias vim=nvim
+alias ecrlogin="aws ecr get-login-password | docker login --username AWS --password-stdin $(aws ecr describe-repositories | jq -r '.repositories[0].repositoryUri' | sed 's/\/.*//g')"
 
 # PyEnv
 eval "$(pyenv init -)"
