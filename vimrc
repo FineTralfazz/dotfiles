@@ -40,6 +40,7 @@ let g:LanguageClient_rootMarkers = {
 		\ 'ruby': ['Gemfile']
 		\ }
 
+let mapleader = ","
 nnoremap <silent> <leader>, :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> <leader>d :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <leader>r :call LanguageClient#textDocument_rename()<CR>
@@ -70,7 +71,6 @@ set foldmethod=syntax
 set foldlevelstart=99 " Don't fold by default
 set mouse=a
 set number
-let mapleader = ","
 
 " double tap esc to dehighlight the last search
 nnoremap <esc><esc> :noh<return><esc>
