@@ -36,6 +36,8 @@ alias gdb='gdb -q'
 alias http='python3 -m http.server'
 alias ghidra=ghidraRun
 alias vim=nvim
+alias ls=exa
+alias cat=bat
 
 # PyEnv
 eval "$(pyenv init -)"
