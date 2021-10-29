@@ -4,6 +4,8 @@
 	signingkey = F2D67595
 [push]
 	default = simple
+[pull]
+	rebase = true
 [core]
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
@@ -11,3 +13,5 @@
 	gpgsign = false
 [init]
 	defaultBranch = main
+[fetch]
+	prune = true
