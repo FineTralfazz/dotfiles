@@ -9,6 +9,7 @@ export SAVEHIST=1000
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM="$DEVKITPRO/devkitARM"
 export ZSH_CACHE_DIR=/tmp
+export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"
 
 if [[ `uname` == Darwin || `uname` == FreeBSD ]]; then
 	source /usr/local/share/antigen/antigen.zsh
