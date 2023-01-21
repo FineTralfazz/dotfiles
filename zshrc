@@ -34,7 +34,7 @@ setopt extended_history
 
 #Aliases
 alias gdb='gdb -q'
-alias http='python3 -m http.server'
+alias http='ifconfig en0 && python3 -m http.server'
 alias ghidra=ghidraRun
 alias vim=nvim
 alias ecrlogin='aws ecr get-login-password | docker login --username AWS --password-stdin 807910786745.dkr.ecr.us-west-2.amazonaws.com'
