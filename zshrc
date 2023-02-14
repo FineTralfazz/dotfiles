@@ -11,8 +11,9 @@ export DEVKITARM="$DEVKITPRO/devkitARM"
 export ZSH_CACHE_DIR=/tmp
 export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"
 
-if [[ `uname` == Darwin || `uname` == FreeBSD ]]; then
-	source /usr/local/share/antigen/antigen.zsh
+if [[ `uname` == Darwin ]]; then
+	export PATH=$PATH:/opt/homebrew/bin
+	source /opt/homebrew/share/antigen/antigen.zsh
 else
 	source /usr/share/zsh-antigen/antigen.zsh
 fi
