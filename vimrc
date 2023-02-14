@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ap/vim-css-color'
 	Plug 'vim-airline/vim-airline'
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 	Plug 'junegunn/fzf'
 	Plug 'tpope/vim-fugitive'
 	Plug 'airblade/vim-gitgutter'
@@ -21,11 +20,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'rstacruz/vim-closer'
 	Plug 'tpope/vim-dispatch'
 	Plug 'tpope/vim-eunuch'
-	if has('win32') || has('win64')
-		Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
-	else
-		Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-	endif
 call plug#end()
 
 
