@@ -31,8 +31,8 @@ antigen apply
 setopt share_history
 setopt inc_append_history
 setopt extended_history
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
 
 #Aliases
 alias gdb='gdb -q'
@@ -41,7 +41,6 @@ alias ghidra=ghidraRun
 alias vim=nvim
 alias ecrlogin='aws ecr get-login-password | docker login --username AWS --password-stdin 807910786745.dkr.ecr.us-west-2.amazonaws.com'
 alias ls=exa
-alias cat=bat
 
 # PyEnv
 eval "$(pyenv init -)"
