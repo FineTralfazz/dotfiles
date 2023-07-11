@@ -28,10 +28,11 @@ antigen bundle marzocchi/zsh-notify
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
-bindkey -v
 setopt share_history
 setopt inc_append_history
 setopt extended_history
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 #Aliases
 alias gdb='gdb -q'

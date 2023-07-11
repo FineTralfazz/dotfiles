@@ -4,6 +4,7 @@
 	signingkey = F2D67595
 [push]
 	default = simple
+	autoSetupRemote = true
 [pull]
 	rebase = true
 [core]
